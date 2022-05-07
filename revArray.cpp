@@ -15,16 +15,15 @@ int main(){
         cout << "enter the elemetn at index "<<i<<" :";
         cin >> arr[i];
     }
-    int size=n;
     int half = n/2;
     for(int i=0; i<half; i++)
     {
         int temp = arr[i];
-        arr[i] = arr[n-1];
-        arr[n-1] = temp;
+        arr[i] = arr[n-i-1];
+        arr[n-i-1] = temp;
     }
 
-    for(int i=0;i<size;i++)
+    for(int i=0;i<n;i++)
     {
         cout<<arr[i]<<endl;
     }
